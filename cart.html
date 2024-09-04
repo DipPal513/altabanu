@@ -49,16 +49,31 @@
         text-decoration: none;
         cursor: pointer;
       }
+      /* Optional: Add hover effects to user icon */
+      .userIcon:hover {
+        color: #555;
+      }
+      
+      /* Dropdown positioning */
+      #userDropdown {
+        min-width: 150px;
+        right: 0;
+      }
     </style>
   </head>
   <body>
-     <!-- header -->
-     <header class="shadow">
+    <header class="shadow">
       <div class="shadow">
         <div class="topHeader max-w-screen-xl mx-auto py-5">
           <ul
-            class="flex flex-wrap items-center gap-5 justify-center md:justify-start"
+            class="flex overflow-x-auto items-center gap-5 justify-center md:justify-start text-nowrap"
           >
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Women</a></li>
+            <li><a href="/">Hand Made</a></li>
+            <li><a href="/">Men</a></li>
+            <li><a href="/">Traditional Outfit</a></li>
+            <li><a href="/">About</a></li>
             <li><a href="/">Home</a></li>
             <li><a href="/">Women</a></li>
             <li><a href="/">Hand Made</a></li>
@@ -69,13 +84,17 @@
         </div>
       </div>
       <div
-        class="max-w-screen-xl mx-auto flex flex-wrap items-center py-3 justify-between"
+        class="max-w-screen-xl mx-auto flex items-center py-3 justify-between px-2"
       >
-        <div class="logo w-full md:w-auto flex justify-center md:justify-start">
+        <a
+          href="./index.html"
+          class="logo w-full basis-1/2 md:w-auto flex justify-center md:justify-start"
+        >
           <img src="./images/logo.png" alt="logo" class="h-10" />
-        </div>
+        </a>
+
         <div
-          class="search w-full md:w-auto flex justify-center items-center mt-3 md:mt-0"
+          class="search w-full md:w-auto hidden sm:flex basis-full justify-center items-center mt-3 mx-5 md:mx-0 order-3 md:order-none md:mt-0"
         >
           <input
             type="text"
@@ -88,17 +107,63 @@
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
+
         <div
-          class="icons w-full md:w-auto flex items-center justify-center md:justify-end text-xl gap-4 mt-3 md:mt-0"
+          class="icons w-full md:w-auto flex items-center justify-center md:justify-end text-xl gap-4 mt-3 md:mt-0 relative basis-1/2"
         >
-          <i class="fa-solid fa-video"></i>
           <i class="fa-brands fa-whatsapp"></i>
-          <i class="fa-solid fa-circle-user"></i>
-          <i class="fa-regular fa-heart"></i>
-          <a href="/cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+          <i
+            class="fa-solid fa-circle-user userIcon cursor-pointer"
+            onclick="toggleDropdown()"
+          ></i>
+          <!-- <i class="fa-regular fa-heart"></i> -->
+          <a href="./cart.html">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <sup class="font-bold rounded-full">0</sup>
+          </a>
+
+          <!-- Dropdown Menu -->
+          <div
+            id="userDropdown"
+            class="absolute right-0 top-[169%] bg-white border border-gray-300 rounded-lg shadow-lg hidden"
+          >
+            <ul class="py-2">
+              <li>
+                <a href="/profile" class="block px-4 py-2 hover:bg-gray-100"
+                  >Profile</a
+                >
+              </li>
+              <li>
+                <a href="/orders" class="block px-4 py-2 hover:bg-gray-100"
+                  >Orders</a
+                >
+              </li>
+              <li>
+                <a href="/logout" class="block px-4 py-2 hover:bg-gray-100"
+                  >Logout</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
+      <div
+        class="search w-[90vw] md:w-auto sm:hidden flex justify-center items-center mt-3 mx-5 md:mt-0"
+      >
+        <input
+          type="text"
+          placeholder="Search for Style, Collections & more"
+          class="border-black border-2 px-3 py-2 rounded-l-lg w-full md:w-auto"
+        />
+        <button
+          class="bg-black text-white px-3 py-2 border-2 border-black rounded-r-lg"
+        >
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
     </header>
+
+
     <!-- header -->
     <section class="w-full py-10">
       <div class="max-w-screen-lg mx-auto px-2 flex flex-wrap">

@@ -37,3 +37,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
   
+  function changeImage(imageSrc) {
+    document.getElementById("mainImage").src = imageSrc;
+  }
+  function toggleDropdown() {
+    const dropdown = document.getElementById("userDropdown");
+    dropdown.classList.toggle("hidden");
+  }
+  
+  // Close dropdown when clicking outside of it
+  document.addEventListener("click", function(event) {
+    const dropdown = document.getElementById("userDropdown");
+    const userIcon = document.querySelector(".userIcon");
+    if (!userIcon.contains(event.target) && !dropdown.contains(event.target)) {
+      dropdown.classList.add("hidden");
+    }
+  });
+  

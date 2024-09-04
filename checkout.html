@@ -166,9 +166,9 @@
     <section class="w-full py-10">
       <div class="max-w-screen-lg mx-auto px-2 flex flex-wrap">
         <!-- Left Side: Shipping Address and Payment Method -->
-        <div class="w-full lg:w-2/3 mb-8 lg:mb-0 shadow-xl rounded p-2">
+        <div class="w-full lg:w-2/3 mb-8 lg:mb-0 ">
           <!-- Shipping Address Section -->
-          <div class="mb-8">
+          <div class="mb-8 border shadow-xl p-3 rounded">
             <h2 class="text-xl font-semibold mb-4">Shipping Address</h2>
             <!-- Pick up your parcel from -->
             <div class="mb-4">
@@ -217,14 +217,14 @@
           </div>
   
           <!-- Payment Method Section -->
-          <div class="mb-8">
+          <div class="mb-8 border rounded p-3 shadow-xl">
             <h2 class="text-xl font-semibold mb-4">Payment Method</h2>
             <div class="flex flex-col gap-4">
               <!-- Cash on Delivery -->
               <label class="radio-custom flex items-center p-4 border rounded-lg shadow-sm hover:shadow-lg transition-shadow">
                 <input type="radio" name="payment" value="cod">
                 <span class="radio-label flex items-center">
-                  <i class="fa-solid fa-money-bill-wave text-green-500 text-2xl mr-4"></i>
+                  <i class="fa-solid fa-money-bill-wave text-green-500 text-2xl mx-4"></i>
                   <span class="text-lg font-medium">Cash on Delivery</span>
                 </span>
               </label>
@@ -233,7 +233,7 @@
               <label class="radio-custom flex items-center p-4 border rounded-lg shadow-sm hover:shadow-lg transition-shadow">
                 <input type="radio" name="payment" value="card">
                 <span class="radio-label flex items-center">
-                  <i class="fa-solid fa-credit-card text-blue-500 text-2xl mr-4"></i>
+                  <i class="fa-solid fa-credit-card text-blue-500 text-2xl mx-4"></i>
                   <span class="text-lg font-medium">Credit/Debit Card</span>
                 </span>
               </label>
@@ -242,8 +242,9 @@
               <label class="radio-custom flex items-center p-4 border rounded-lg shadow-sm hover:shadow-lg transition-shadow">
                 <input type="radio" name="payment" value="others">
                 <span class="radio-label flex items-center">
-                  <i class="fa-solid fa-wallet text-purple-500 text-2xl mr-4"></i>
-                  <span class="text-lg font-medium">Other Payment Methods</span>
+                  <i class="fa-solid fa-wallet text-purple-500 text-2xl mx-4"></i>
+                  <!-- <span class="text-lg font-medium">Other Payment Methods</span> -->
+                  <img src="https://flexiguy.com/assets/FOOTER-aamarPay.png" alt="payment-method" class="w-[90%]">
                 </span>
               </label>
             </div>

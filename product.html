@@ -14,52 +14,45 @@
       .userIcon:hover {
         color: #555;
       }
-      /* Container for size options */
-      .size-option {
-        display: flex;
-        align-items: center;
-        border: 2px solid #ccc;
-        border-radius: 8px;
-        cursor: pointer;
-        width: 26px;
-        
-        transition: border-color 0.3s, background-color 0.3s;
-      }
+     /* Container for size options */
+.size-option {
+  display: flex;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  /* padding: 5px; */
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.3s;
+}
 
-      /* Hover effect */
-      .size-option:hover {
-        border-color: #999;
-        background-color: #999;
-      }
+/* Hover effect */
+.size-option:hover {
+  border-color: #999;
+}
 
-      /* Selected effect */
-      input[type="radio"]:checked + .size-label {
-        background-color: #999;
-        border-color: #333;
-        color: #333;
-        font-weight: bold;
-      }
-      input[type="radio"]:checked + .size-option {
-        background-color: #999;
-      }
-     
-      /* Hide the radio button */
-      input[type="radio"] {
-        display: none;
-      }
+/* Selected effect */
+input[type="radio"]:checked + .size-label {
+  background-color: #f0f0f0; /* Gray background */
+  border-color: #333;
+  color: #333;
+  font-weight: bold;
+}
 
-      /* Label for size */
-      .size-label {
-        display: block;
-        width: 17px;
-        margin: 0 auto;
-        height: auto;
-        border-radius: 8px;
-        text-align: center;
-        font-size: 16px;
-        color: #333;
-        
-      }
+/* Hide the radio button */
+input[type="radio"] {
+  display: none;
+}
+
+/* Label for size */
+.size-label {
+  display: block;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  transition: background-color 0.3s, border-color 0.3s;
+}
 
       /* Dropdown positioning */
       #userDropdown {

@@ -17,3 +17,6 @@ footer{
 #userDropdown{
     z-index: 11111111111 !important;
 }
+.big_ul{
+    scrollbar-width: none; 
+}

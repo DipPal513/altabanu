@@ -14,6 +14,44 @@
       .userIcon:hover {
         color: #555;
       }
+/* Container for size options */
+.size-option {
+  display: flex;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 5px;
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+/* Hover effect */
+.size-option:hover {
+  border-color: #999;
+}
+
+/* Selected effect */
+input[type="radio"]:checked + .size-label {
+  background-color: #969393;
+  border-color: #333;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Hide the radio button */
+input[type="radio"] {
+  display: none;
+}
+
+/* Label for size */
+.size-label {
+  display: block;
+  padding: 6;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+}
 
       /* Dropdown positioning */
       #userDropdown {
@@ -184,23 +222,29 @@
             <div class="mt-2">
               <h2 class="font-bold text-xl mb-2">Select Size</h2>
               <div class="flex items-center gap-3 my-5">
-                <div class="border rounded-lg border-red-400">
-                  <p class="p-2">XS</p>
-                </div>
-                <div class="border rounded-lg border-red-400">
-                  <p class="p-2">S</p>
-                </div>
-                <div class="border rounded-lg border-red-400">
-                  <p class="p-2">M</p>
-                </div>
-                <div class="border rounded-lg border-red-400">
-                  <p class="p-2">L</p>
-                </div>
-                <div class="border rounded-lg border-red-400">
-                  <p class="p-2">XL</p>
-                </div>
+                <label class="size-option">
+                  <input type="radio" name="size" value="XS" />
+                  <span class="size-label">XS</span>
+                </label>
+                <label class="size-option">
+                  <input type="radio" name="size" value="S" />
+                  <span class="size-label">S</span>
+                </label>
+                <label class="size-option">
+                  <input type="radio" name="size" value="M" />
+                  <span class="size-label">M</span>
+                </label>
+                <label class="size-option">
+                  <input type="radio" name="size" value="L" />
+                  <span class="size-label">L</span>
+                </label>
+                <label class="size-option">
+                  <input type="radio" name="size" value="XL" />
+                  <span class="size-label">XL</span>
+                </label>
               </div>
             </div>
+            
             <div class="specification">
               <h2 class="text-xl mb-3 font-bold">Specification</h2>
               <div class="flex flex-col gap-3">

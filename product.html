@@ -14,44 +14,52 @@
       .userIcon:hover {
         color: #555;
       }
-/* Container for size options */
-.size-option {
-  display: flex;
-  align-items: center;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  padding: 5px;
-  cursor: pointer;
-  transition: border-color 0.3s, background-color 0.3s;
-}
+      /* Container for size options */
+      .size-option {
+        display: flex;
+        align-items: center;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 26px;
+        
+        transition: border-color 0.3s, background-color 0.3s;
+      }
 
-/* Hover effect */
-.size-option:hover {
-  border-color: #999;
-}
+      /* Hover effect */
+      .size-option:hover {
+        border-color: #999;
+        background-color: #999;
+      }
 
-/* Selected effect */
-input[type="radio"]:checked + .size-label {
-  background-color: #969393;
-  border-color: #333;
-  color: #333;
-  font-weight: bold;
-}
+      /* Selected effect */
+      input[type="radio"]:checked + .size-label {
+        background-color: #999;
+        border-color: #333;
+        color: #333;
+        font-weight: bold;
+      }
+      input[type="radio"]:checked + .size-option {
+        background-color: #999;
+      }
+     
+      /* Hide the radio button */
+      input[type="radio"] {
+        display: none;
+      }
 
-/* Hide the radio button */
-input[type="radio"] {
-  display: none;
-}
-
-/* Label for size */
-.size-label {
-  display: block;
-  padding: 6;
-  border-radius: 8px;
-  text-align: center;
-  font-size: 16px;
-  color: #333;
-}
+      /* Label for size */
+      .size-label {
+        display: block;
+        width: 17px;
+        margin: 0 auto;
+        height: auto;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 16px;
+        color: #333;
+        
+      }
 
       /* Dropdown positioning */
       #userDropdown {
@@ -244,7 +252,7 @@ input[type="radio"] {
                 </label>
               </div>
             </div>
-            
+
             <div class="specification">
               <h2 class="text-xl mb-3 font-bold">Specification</h2>
               <div class="flex flex-col gap-3">
